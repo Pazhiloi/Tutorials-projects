@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Obstacle : MonoBehaviour
     if (collision.gameObject.name == "Player") 
     {
       Destroy(collision.gameObject);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     if (collision.gameObject.name == "Out") 
     {
